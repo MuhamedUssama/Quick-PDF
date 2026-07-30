@@ -1,0 +1,28 @@
+PODS:
+  - camerawesome (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+  - printing (1.0.0):
+    - Flutter
+
+DEPENDENCIES:
+  - camerawesome (from `.symlinks/plugins/camerawesome/ios`)
+  - Flutter (from `Flutter`)
+  - printing (from `.symlinks/plugins/printing/ios`)
+
+EXTERNAL SOURCES:
+  camerawesome:
+    :path: ".symlinks/plugins/camerawesome/ios"
+  Flutter:
+    :path: Flutter
+  printing:
+    :path: ".symlinks/plugins/printing/ios"
+
+SPEC CHECKSUMS:
+  camerawesome: a961fa32dafc00d2f093d824311c84f849586b58
+  Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
+  printing: a8960104e6c1a2b4bd3483a2f79c69be60830d08
+
+PODFILE CHECKSUM: 3c63482e143d1b91d2d2560aee9fb04ecc74ac7e
+
+COCOAPODS: 1.16.2
