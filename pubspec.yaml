@@ -13,6 +13,7 @@ dependencies:
 
   # UI & Camera
   camerawesome: ^2.5.0
+  iconsax_plus:
 
   # State Management
   flutter_bloc:
@@ -21,6 +22,7 @@ dependencies:
   hive_ce:
   hive_ce_flutter:
   path_provider:
+  shared_preferences:
 
   # PDF Generation & Sharing
   pdf:
@@ -28,6 +30,9 @@ dependencies:
 
   get_it:
   injectable:
+
+  firebase_core:
+  firebase_ai:
   
 
 dev_dependencies:
