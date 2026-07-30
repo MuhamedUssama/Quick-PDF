@@ -1,5 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:quick_pdf/core/router/app_router.dart';
+import 'package:quick_pdf/core/router/routes_name.dart';
 import 'package:quick_pdf/core/service_locator/service_locator.dart';
 import 'package:quick_pdf/core/services/shared_preferences_services.dart';
 import 'package:quick_pdf/core/theme/app_theme.dart';
@@ -24,7 +26,8 @@ class QuickPdfApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.light,
-      home: const Scaffold(),
+      onGenerateRoute: AppRouter.onGenerateRoute,
+      initialRoute: RoutesName.camera,
     );
   }
 }

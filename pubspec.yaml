@@ -14,6 +14,8 @@ dependencies:
   # UI & Camera
   camerawesome: ^2.5.0
   iconsax_plus:
+  freezed_annotation:
+  animate_do:
 
   # State Management
   flutter_bloc:
@@ -42,6 +44,7 @@ dev_dependencies:
   hive_ce_generator:
   build_runner:
   injectable_generator:
+  freezed:
 
 flutter:
   uses-material-design: true

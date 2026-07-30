@@ -132,14 +132,14 @@ For any feature, the presentation layer under `lib/features/[feature_name]/prese
 
 ---
 
-### 🧠 State Management with Cubit & `copyWith`
+### 🧠 State Management with Cubit & `freezed`
 
-To ensure clean state tracking and UI separation:
-1. **Inheriting Base States**: All presentation states **MUST** extend from the unified `BaseState` structure (`lib/core/services/base_states.dart`).
-2. **Standard State Properties**: The state class should contain fields representing the screen inputs, visibility toggles, and a dedicated `actionState` (or `processState`) of type `BaseState` to handle `InitialState`, `LoadingState`, `SuccessState`, and `ErrorState`.
-3. **The `copyWith` Method**: Every state class **MUST** implement `copyWith` to facilitate immutable state updates, allowing subsequent UI updates to only modify specific parts of the state.
+To ensure clean state tracking, immutability, and UI separation:
+1. **Freezed Annotations**: All presentation state classes **MUST** be defined using `@freezed` from the `freezed_annotation` package with `part '[feature]_state.freezed.dart';`.
+2. **State Unions / Properties**: Define explicit union states (e.g. `initial()`, `loading()`, `ready()`, `capturing()`, `error(String message)`) or a immutable data state holding properties such as active entity, session items, counters, status, and error message.
+3. **Immutability & `copyWith`**: Leverage the auto-generated `copyWith` from `freezed` for immutable state transitions inside Cubit methods.
 4. **Cubit Responsibilities**:
-   * All business logic, input validation orchestration, API call triggers, and state transitions **MUST** be handled solely within the Cubit.
+   * All business logic, input validation orchestration, UseCase calls, and state transitions **MUST** be handled solely within the Cubit.
    * All controllers (e.g., `TextEditingController`, `ScrollController`) **MUST** live in the Cubit, not in the Screen or Widget.
    * All controllers **MUST** be properly disposed of by overriding the `close()` method in the Cubit.
    * **Injectable**: Cubits must be annotated with `@injectable` for proper dependency injection.
